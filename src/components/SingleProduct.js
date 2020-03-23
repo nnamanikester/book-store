@@ -1,6 +1,6 @@
 import React from "react";
-import "./SingleProduct.css";
-import image from "./images";
+import "../componentStyles/SingleProduct.css";
+import image from "../images";
 
 function SingleProduct() {
   return (
