@@ -1,19 +1,14 @@
-.page-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto 30%;
-  padding: 10px;
-  box-sizing: border-box;
-}
+  .product-body {
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
 .product-image img {
   width: 80%;
   height: 300px;
   border-radius: 10px;
-}
-
-.product-body {
-  text-align: center;
 }
 
 .product-info {

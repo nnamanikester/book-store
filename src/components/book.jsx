@@ -9,7 +9,7 @@ function Book(props) {
               <img alt="book" src={props.image} />
             </div>
             <div className="p-info text-center">
-              <Link to={`/${props.name}`} className="title link">{props.name}</Link>
+              <Link to={`books/${props.id}`} className="title link">{props.name}</Link>
               <br />
               <span className="price">{props.prize}</span>
             </div>

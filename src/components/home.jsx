@@ -1,8 +1,11 @@
 import React, {Component} from "react";
-import "../componentStyles/Home.css";
 import Sidebar from "./sidebar";
 import Topbar from "./topbar";
 import Books from "./books";
+import SingleBook from './singleBook'
+import {Route, Switch} from 'react-router-dom'
+import "../componentStyles/Home.css";
+import "../componentStyles/SingleBook.css"
 
 class Home extends Component {
   render() {
@@ -14,7 +17,10 @@ class Home extends Component {
           <Topbar />
   
           <div className="page-content">
-            <Books />
+            <Switch>
+              <Route path="/" exact strict component={Books} />
+              <Route path="/books/:id" exact strict component={SingleBook} />
+            </Switch>
 
           </div>
         </div>
