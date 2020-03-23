@@ -1,24 +1,27 @@
 const books = [
     {
         "id": 1,
-        "bookName": "The Morgan River1",
+        "name": "The Morgan River1",
         "author": "the author1",
+        "image" : "",
         "prize": "$ 200",
-        "publishedDate": "20-02-2020"
+        "date": "20-02-2020"
     },
     {
         "id": 2,
-        "bookName": "The Morgan River2",
+        "name": "The Morgan River2",
         "author": "the author2",
+        "image" : "",
         "prize": "$ 200",
-        "publishedDate": "20-02-2020"
+        "date": "20-02-2020"
     },
     {
         "id": 4,
-        "bookName": "The Morgan River3",
+        "name": "The Morgan River3",
         "author": "the author3",
+        "image" : "",
         "prize": "$ 200",
-        "publishedDate": "20-02-2020"
+        "date": "20-02-2020"
     }
 ]
 
