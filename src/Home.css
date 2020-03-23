@@ -145,7 +145,7 @@ li {
 }
 .product:hover .price {
   font-size: 14px;
-  margin-top: -20px;
+  margin-top: -5x;
   visibility: visible;
 }
 
