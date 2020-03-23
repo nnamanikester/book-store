@@ -1,0 +1,55 @@
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.page-content {
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+}
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px 5px;
+}
+
+.form-item input,
+.form-item textarea {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: #333;
+  background: #eef;
+}
+
+.form-item label {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.form-button {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+.form-button button {
+  width: 60%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 100px;
+  background: #1e69ea;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+.form-button button:hover {
+  background: #1e69eadd;
+}

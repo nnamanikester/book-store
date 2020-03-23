@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: #fff;
+}
+
+.sidebar {
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 1em;
+}
+
+.logo {
+  margin-bottom: 20px;
+  padding: 0 25px;
+}
+
+.logo img {
+  width: 100px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  margin: 25px 0;
+}
+
+.menu li a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 25px;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+  color: #1e69ea;
+  background: #1e69ea55;
+  border-radius: 50px;
+}
+
+.menu li a.active {
+  color: #1e69ea;
+}
+
+.menu li:last-child a {
+  color: #fff;
+  background: #1e69ea;
+  border-radius: 50px;
+}
+.menu li:last-child {
+  margin-top: 50px;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.topbar {
+  background: #1e69ea;
+  height: 3em;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 60%;
+}
+
+.search-box {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: #333;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link,
+.link:hover {
+  text-decoration: none;
+  color: #000;
+}
