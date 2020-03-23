@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import "../componentStyles/Home.css";
-import image from "../images";
 import Sidebar from "./sidebar";
 import Topbar from "./topbar";
 import Books from "./books";

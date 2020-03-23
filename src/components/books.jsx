@@ -7,7 +7,7 @@ function Books() {
     return (
         <React.Fragment>
             {
-                books.map(book => <Book name={book.name} prize={book.prize} />)
+                books.map(book => <Book key={book.id} name={book.name} id={book.id} prize={book.prize} image={book.image} />)
             }
             
         </React.Fragment>
