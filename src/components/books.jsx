@@ -1,17 +1,15 @@
 import React from 'react'
+import { Link, Route } from 'react-router-dom'
+import SingleBook from './singleBook'
 import Book from './book'
-import books from '../json_book'
 
-function Books() {
 
-    return (
-        <React.Fragment>
-            {
-                books.map(book => <Book key={book.id} name={book.name} id={book.id} prize={book.prize} image={book.image} />)
-            }
-            
-        </React.Fragment>
-    )
-}
-
+const Books = ({ match: { url }, books }) => 
+    <React.Fragment>
+        {books.map(({ name, id, prize, image }) =>
+            <Link key={id} to={`${url}/${id}`}>
+                <Book id={id} image={image} name={name} prize={prize} />
+            </Link>
+        )}
+    </React.Fragment>
 export default Books

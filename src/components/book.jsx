@@ -1,17 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
-function Book(props) {
+function Book({ id, image, name, prize }) {
     return (
         <React.Fragment>
           <div className="product">
             <div className="p-image">
-              <img alt="book" src={props.image} />
+              <img alt="book" src={image} />
             </div>
             <div className="p-info text-center">
-              <Link to={`books/${props.id}`} className="title link">{props.name}</Link>
+              <span className="title link">{name}</span>
               <br />
-              <span className="price">{props.prize}</span>
+              <span className="price">{prize}</span>
             </div>
           </div>
         </React.Fragment>

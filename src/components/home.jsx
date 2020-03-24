@@ -2,15 +2,17 @@ import React, {Component} from "react";
 import Sidebar from "./sidebar";
 import Topbar from "./topbar";
 import Books from "./books";
-import SingleBook from './singleBook'
 import {Route, Switch} from 'react-router-dom'
-import "../componentStyles/Home.css";
 import "../componentStyles/SingleBook.css"
+import books from '../json_book'
+import "../componentStyles/Home.css";
+import SingleBook from "./singleBook";
 
 class Home extends Component {
+  
   render() {
-    return (
-      <div className="page">
+        return (
+          <div className="page">
         <Sidebar />
   
         <div className="page-body">
@@ -18,8 +20,14 @@ class Home extends Component {
   
           <div className="page-content">
             <Switch>
-              <Route path="/" exact strict component={Books} />
-              <Route path="/books/:id" exact strict component={SingleBook} />
+              <Route path="/books" exact render={
+                props => <Books {...props} books={books} />
+              }/>
+              
+                  <Route path="/books/:bookId" render={
+                    props => <SingleBook {...props} books={books} />} />
+              
+              
             </Switch>
 
           </div>

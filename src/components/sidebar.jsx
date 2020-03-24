@@ -12,6 +12,7 @@ function Sidebar() {
                 <div className="menu">
                     <ul>
                         <li><NavLink activeStyle={{color:'red'}} exact to="/">Home</NavLink></li>
+                        <li><NavLink activeStyle={{color:'red'}} exact to="/books">Books</NavLink></li>
                         <li><NavLink activeStyle={{color:'red'}} exact to="/about">About</NavLink></li>
                         <li><NavLink activeStyle={{color:'red'}} exact to="/services">Services</NavLink></li>
                         <li><NavLink activeStyle={{color:'red'}} exact to="/dmca">DMCA</NavLink></li>
