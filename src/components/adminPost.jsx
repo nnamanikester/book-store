@@ -1,8 +1,8 @@
 import React from "react";
-import "./AdminPost.css";
-import image from "./images";
+import "../componentStyles/AdminPost.css";
+import image from "../images";
 
-function AdminUpdate() {
+function AdminPost() {
   return (
     <div className="page">
       <div className="sidebar">
@@ -43,7 +43,7 @@ function AdminUpdate() {
       <div className="page-body">
         <div className="topbar">
           <div className="search-bar">
-            <h2 className="text-white title">Edit This Morgan Water</h2>
+            <h2 className="text-white title">Post A Book</h2>
           </div>
         </div>
 
@@ -51,37 +51,23 @@ function AdminUpdate() {
           <div className="form">
             <div className="form-item">
               <label>Title:</label>
-              <input
-                type="text"
-                placeholder="Book Title..."
-                value="This Morgan Water"
-              />
+              <input type="text" placeholder="Book Title..." />
             </div>
             <div className="form-item">
               <label>Author:</label>
-              <input
-                type="text"
-                placeholder="Author Name..."
-                value="Martin Luther"
-              />
+              <input type="text" placeholder="Author Name..." />
             </div>
             <div className="form-item">
               <label>Publish Date:</label>
-              <input
-                type="date"
-                placeholder="Publish Date..."
-                value="20/11/2020"
-              />
+              <input type="date" placeholder="Publish Date..." />
             </div>
             <div className="form-item">
               <label>Price:</label>
-              <input type="number" placeholder="Price..." value="150" />
+              <input type="number" placeholder="Price..." />
             </div>
             <div className="form-item">
               <label>Description:</label>
-              <textarea rows="8" placeholder="Book Description...">
-                This is the Morgan Water Description...
-              </textarea>
+              <textarea rows="8" placeholder="Book Description..."></textarea>
             </div>
             <div className="form-item">
               <label>Image:</label>
@@ -97,4 +83,4 @@ function AdminUpdate() {
   );
 }
 
-export default AdminUpdate;
+export default AdminPost;
