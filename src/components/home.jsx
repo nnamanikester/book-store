@@ -13,20 +13,30 @@ class Home extends Component {
   render() {
         return (
           <div className="page">
-        <Sidebar />
+            <Sidebar />
   
         <div className="page-body">
           <Topbar />
-  
           <div className="page-content">
+
+            {/* Routes */}  
             <Switch>
               <Route path="/books" exact render={
                 props => <Books {...props} books={books} />
-              }/>
-              
-                  <Route path="/books/:bookId" render={
-                    props => <SingleBook {...props} books={books} />} />
-              
+              } />
+                  
+              <Route path="/books/:bookId" exact render={({match: {params: {bookId}}}) => {
+                let book = books.filter(book => book.id === parseInt(bookId));
+                book = book[0];
+                return (
+                  <SingleBook {...book} />
+                )
+              }} />
+                  
+                  
+              {/* <Route path="/books/:bookId" render={
+                props => <SingleBook {...props} />}
+              /> */}
               
             </Switch>
 

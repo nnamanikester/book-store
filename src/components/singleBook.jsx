@@ -1,10 +1,37 @@
-import React from "react";
+import React, {Component} from "react";
 
-const SingleBook = ({match, id, name, image, date, prize, description}) => {
-  console.log(match)
-  return (
-    <React.Fragment>
-      <h1>Hello</h1>
+class SingleBook extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      quantity: 1,
+      total: this.props.prize
+    }
+  }
+
+  addQuantity = () => {
+    let { quantity, total } = this.state;
+    let { prize } = this.props;
+    this.setState({
+      quantity: quantity + 1,
+      total: total + prize
+    })
+  }
+  reduceQuantity = () => {
+    let { quantity, total } = this.state;
+    let { prize } = this.props;
+    this.setState({
+      quantity: quantity > 1 ? quantity - 1 : 1,
+      total: quantity > 1 ? total - prize : prize
+    })
+  }
+  
+  
+  render() {
+    const { name, image, date, prize, dsc } = this.props;
+    return ( 
+      <React.Fragment>
       <div className="product-body">
         <div className="product-image">
           <img alt="book" src={image} />
@@ -13,7 +40,7 @@ const SingleBook = ({match, id, name, image, date, prize, description}) => {
           <h2 className="title">{name}</h2>
           <div className="product-info">
             <p>
-              {description}
+              {dsc}
             </p>
           </div>
         </div>
@@ -34,19 +61,19 @@ const SingleBook = ({match, id, name, image, date, prize, description}) => {
           </div>
           <div className="c-container">
             <span className="c-title"> Price: </span>
-            <span className="c-ans">{prize}</span>
+            <span className="c-ans">{`$ ${prize}`}</span>
           </div>
           <div className="c-container">
             <span className="c-title"> Quantity: </span>
-            <span className="c-ans">2</span>
+              <span className="c-ans">{this.state.quantity}</span>
             <span className="counter">
-              <button>-</button>
-              <button>+</button>
+              <button onClick={this.reduceQuantity}>-</button>
+              <button onClick={this.addQuantity}>+</button>
             </span>
           </div>
           <div className="c-container">
             <span className="c-title"> Total: </span>
-            <span className="c-ans">$ 400</span>
+              <span className="c-ans">{`$ ${this.state.total}`}</span>
           </div>
           <div className="c-button-container">
             <button className="c-button">Checkout</button>
@@ -54,8 +81,12 @@ const SingleBook = ({match, id, name, image, date, prize, description}) => {
         </div>
       </div>
     </React.Fragment>
-  )
+     );
+  }
 }
+ 
+
+
 
 
 export default SingleBook;
